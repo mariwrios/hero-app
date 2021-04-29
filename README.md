@@ -1,6 +1,6 @@
 # Hero App
 
-Es un proyecto donde se consume una api utilizando React.js, Testing, Hooks
+Es un proyecto donde se utiliza React.js, Testing, Hooks
 entre otras cosas.
 
  <img src='./public/assets/heroApp.jpeg'>
