@@ -11,7 +11,7 @@ const SearchScreem = ({ history }) => {
 
   const { q = "" } = queryString.parse(location.search)
 
-  const [formValues, handleInputChange, reset] = useForm({
+  const [formValues, handleInputChange] = useForm({
     name: q
   })
   const { name } = formValues

@@ -31,7 +31,7 @@ const HeroScreen = ({ history }) => {
         }}
       >
         <div style={{ display: "flex" }}>
-          <img style={{ width: 250 }} src={`../assets/heroes/${id}.jpg`} />
+          <img style={{ width: 250 }} src={`../assets/heroes/${id}.jpg`} alt={id} />
           <div style={card}>
             <h2>{superhero}</h2>
             <h5>Datos destacables</h5>
