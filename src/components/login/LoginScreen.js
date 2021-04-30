@@ -11,15 +11,18 @@ const LoginScreen = ({ history }) => {
   })
   const { name } = formValues
 
-
   const lastPath = localStorage.getItem('lasPath') || '/'
 
   const handleLogin = () => {
-    history.replace(lastPath)
-    dispatch({
-      type: types.login,
-      payload: { user: `${name}` }
-    })
+    if (name.length > 2) {
+      history.replace(lastPath)
+      dispatch({
+        type: types.login,
+        payload: { user: name }
+      })
+    }
+   
+
   }
 
   const handleSubmit = (e) => {
@@ -27,13 +30,16 @@ const LoginScreen = ({ history }) => {
     reset()
   }
 
+
+
   return (
     <div className="container mt-5">
       <h1>Login Screen</h1>
       <hr />
 
       <form onSubmit={handleSubmit}>
-        {  /*   {(name.length <= 2) && <div className="alert alert-danger"> write your name </div>} */}
+        {(name.length <= 2) && (<div className="alert alert-info"> Write a name</div>)}
+
         <input
           style={{
             height: 50,
