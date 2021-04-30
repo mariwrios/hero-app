@@ -18,7 +18,7 @@ const LoginScreen = ({ history }) => {
       history.replace(lastPath)
       dispatch({
         type: types.login,
-        payload: { user: name }
+        payload: { user: `${name}` }
       })
     }
    
